@@ -108,7 +108,10 @@ class NoHands:
         if self.page and not self.connect_existing:
             await self.page.close()
         if self.playwright:
-            await self.playwright.__aexit__(*args)
+            try:
+                await self.playwright.stop()
+            except Exception:
+                pass
 
     # ── LOGGING ──────────────────────────────────────────────
 
