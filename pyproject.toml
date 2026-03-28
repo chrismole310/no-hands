@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "no-hands"
+version = "0.1.0"
+description = "The Playwright framework that actually works. Smart element finding, auto-modal dismissal, 2FA handling, deep navigation."
+authors = [{name = "Backbone Logic", email = "atlas@run-atlas.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["playwright>=1.40.0"]
+
+[project.optional-dependencies]
+telegram = []
+
+[project.urls]
+Homepage = "https://github.com/chrismole310/no-hands"
+Issues = "https://github.com/chrismole310/no-hands/issues"
